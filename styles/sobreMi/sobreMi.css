@@ -1,0 +1,123 @@
+body {
+    background-color: rgb(50, 46, 46);
+    color: aliceblue;
+}
+h1 {
+    text-align: center;
+}
+p {
+    animation: mymove 7s infinite;
+}
+
+h2 {
+    animation: colo 2s infinite;
+}
+hr {
+    height: 3px;
+}
+
+.prueba {
+    width: 100px;
+    height: 100px;
+    background: aliceblue;
+    animation: prueba 1s infinite;
+}
+
+.container {
+    display:  flex;
+}
+.card {
+    border-radius: 20px;
+    margin-left: 10px;
+    height: 200px;
+    background-color: rgb(57, 57, 57);
+    flex: 1;
+    transition: .3s all ease;
+}
+.card:hover {
+    flex: 2;
+    background-color: aliceblue;
+}
+
+@keyframes mymove {
+    from {color: aliceblue;}
+    to {color: red;}
+}
+@keyframes colo {
+    from {color: aliceblue;}
+    to {color: black;}
+}
+@keyframes prueba {
+    from {background-color: aliceblue;}
+    to {background-color: black;}
+}
+@keyframes mover {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+.ulNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    list-style: none;
+}
+
+.ulNav * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.ulNav a {
+    position: relative;
+    color: rgba(205, 207, 205, 0.5);
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+}
+
+.ulNav a::before,
+.ulNav a::after {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+.ulNav a::before {
+    right: 0;
+    top: 0;
+    border-right: 3px solid #07d111;
+    border-top: 3px solid #07d111;
+    -webkit-transform: translate(-100%, 50%);
+    transform: translate(-100%, 50%);
+}
+.ulNav a::after {
+    left: 0;
+    bottom: 0;
+    border-left: 3px solid #07d111;
+    border-bottom: 3px solid #07d111;
+    -webkit-transform: translate(100%, 50%);
+    transform: translate(100%, 50%);
+}
+
+.ulNav a:hover,
+.ulNav .home a {
+    color: #ffffff;
+}
+
+.ulNav a:hover::before,
+.ulNav .home a::before,
+.ulNav a:hover::after,
+.ulNav .home a::after {
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
