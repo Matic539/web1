@@ -1,2 +1,2 @@
-# web1
+# Pagina web
 Mi primera pagina web
